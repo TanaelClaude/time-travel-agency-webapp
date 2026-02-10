@@ -25,8 +25,8 @@ Webapp pédagogique pour une agence de voyage temporel fictive. Prototype UI/UX 
 - Transitions et animations UI
 
 ## Outils IA / Transparence
-- Génération de code et assistance : GitHub Copilot (GPT 5 mini)
-- Visuels / assets : Google Gemini
+- Génération de code et assistance : GitHub Copilot, Lovable
+- Visuels / assets : Google Gemini & Lovable
 
 ## Installation (rapide, Windows)
 Prérequis : Node.js >= 16, npm ou pnpm.
