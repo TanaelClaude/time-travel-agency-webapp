@@ -1,73 +1,85 @@
-# Welcome to your Lovable project
+# ⏳ TimeTravel Agency — Webapp
 
-## Project info
+Application web interactive pour l'agence de voyages temporels **TimeTravel Agency**, proposant 3 destinations : **Paris 1889**, le **Crétacé** et **Florence 1504**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🚀 Technologies utilisées
 
-There are several ways of editing your application.
+| Technologie | Rôle |
+|---|---|
+| **React 18** | Framework UI (composants réactifs, SPA) |
+| **TypeScript** | Typage statique du code JavaScript |
+| **Vite** | Bundler & serveur de développement ultra-rapide |
+| **Tailwind CSS** | Framework CSS utility-first pour le styling |
+| **Framer Motion** | Animations et transitions fluides |
+| **shadcn/ui** | Bibliothèque de composants UI (boutons, formulaires, toasts…) |
+| **React Router DOM** | Navigation client-side (SPA routing) |
+| **Lucide React** | Icônes SVG modernes |
+| **React Hook Form + Zod** | Gestion et validation des formulaires |
+| **TanStack React Query** | Gestion du state serveur et du cache |
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 💬 Chatbot intégré
 
-Changes made via Lovable will be committed automatically to this repo.
+Le chatbot est un **agent conversationnel local** (sans appel API externe). Il fonctionne avec un système de **matching par mots-clés** :
 
-**Use your preferred IDE**
+- **Moteur** : Logique JavaScript côté client (pas d'IA cloud)
+- **Méthode** : Recherche de mots-clés dans le message utilisateur (`paris`, `crétacé`, `florence`, `prix`, `sécurité`, `réserv`…)
+- **Réponses** : Base de données FAQ statique intégrée au composant `ChatBot.tsx`
+- **UX** : Simulation de temps de réponse (délai aléatoire), animation de "typing", interface de chat moderne avec Framer Motion
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+> ⚠️ Ce n'est **pas** un modèle d'IA (type GPT ou LLM). Pour des réponses intelligentes, il faudrait connecter une API comme OpenAI, Mistral ou Perplexity.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📁 Structure du projet
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```
+src/
+├── assets/              # Images des destinations (générées par IA)
+├── components/
+│   ├── Navbar.tsx        # Barre de navigation
+│   ├── HeroSection.tsx   # Section héro avec animations
+│   ├── DestinationsSection.tsx  # Galerie des 3 destinations
+│   ├── DestinationCard.tsx      # Card interactive par destination
+│   ├── AboutSection.tsx  # Présentation de l'agence
+│   ├── BookingForm.tsx   # Formulaire de réservation
+│   ├── ChatBot.tsx       # Agent conversationnel (FAQ)
+│   ├── Footer.tsx        # Pied de page
+│   └── ui/               # Composants shadcn/ui
+├── pages/
+│   ├── Index.tsx         # Page d'accueil principale
+│   └── NotFound.tsx      # Page 404
+└── index.css             # Design system (tokens CSS, thème sombre doré)
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🎨 Design System
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- **Thème** : Sombre cinématique avec accents dorés
+- **Polices** : *Playfair Display* (titres) + *Inter* (corps)
+- **Tokens CSS** : Variables HSL personnalisées dans `index.css`
+- **Effets** : Glassmorphism, dégradés dorés, animations flottantes
+
+---
+
+## ⚙️ Lancer le projet
+
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📝 Fonctionnalités
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- ✅ Hero section animée avec particules
+- ✅ Galerie interactive des 3 destinations temporelles
+- ✅ Chatbot FAQ avec matching par mots-clés
+- ✅ Formulaire de réservation avec validation
+- ✅ Design responsive
+- ✅ Animations Framer Motion
