@@ -1,10 +1,8 @@
-# ⏳ TimeTravel Agency — Webapp
+# TimeTravel Agency - Webapp Interactive
 
-Application web interactive pour l'agence de voyages temporels **TimeTravel Agency**, proposant 3 destinations : **Paris 1889**, le **Crétacé** et **Florence 1504**.
+Webapp pédagogique pour une agence de voyage temporel fictive. Prototype UI/UX et intégrations IA pour démonstration.
 
----
-
-## 🚀 Technologies utilisées
+## Technologies utilisées
 
 | Technologie | Rôle |
 |---|---|
@@ -19,20 +17,33 @@ Application web interactive pour l'agence de voyages temporels **TimeTravel Agen
 | **React Hook Form + Zod** | Gestion et validation des formulaires |
 | **TanStack React Query** | Gestion du state serveur et du cache |
 
----
+## Fonctionnalités implémentées
+- Landing page interactive
+- Galerie de 3 destinations temporelles
+- Chatbot conversationnel intégré (connexion API)
+- Recommandations simples basées sur une entrée utilisateur
+- Transitions et animations UI
 
-## 💬 Chatbot intégré
+## Outils IA / Transparence
+- Génération de code et assistance : GitHub Copilot (GPT 5 mini)
+- Visuels / assets : Google Gemini
 
-Le chatbot est un **agent conversationnel local** (sans appel API externe). Il fonctionne avec un système de **matching par mots-clés** :
-
-- **Moteur** : Logique JavaScript côté client (pas d'IA cloud)
-- **Méthode** : Recherche de mots-clés dans le message utilisateur (`paris`, `crétacé`, `florence`, `prix`, `sécurité`, `réserv`…)
-- **Réponses** : Base de données FAQ statique intégrée au composant `ChatBot.tsx`
-- **UX** : Simulation de temps de réponse (délai aléatoire), animation de "typing", interface de chat moderne avec Framer Motion
-
-> ⚠️ Ce n'est **pas** un modèle d'IA (type GPT ou LLM). Pour des réponses intelligentes, il faudrait connecter une API comme OpenAI, Mistral ou Perplexity.
-
----
+## Installation (rapide, Windows)
+Prérequis : Node.js >= 16, npm ou pnpm.
+PowerShell :
+1. Cloner :
+   git clone [<repo-url>](https://github.com/TanaelClaude/time-travel-agency-webapp.git)
+   cd time-travel-agency-webapp
+2. Installer dépendances :
+   npm install
+3. Lancer en dev :
+   npm run dev
+4. Build :
+   npm run build
+5. Preview :
+   npm run preview
+6. Consulter en ligne :
+    [<Notre site>]()
 
 ## 📁 Structure du projet
 
@@ -55,8 +66,6 @@ src/
 └── index.css             # Design system (tokens CSS, thème sombre doré)
 ```
 
----
-
 ## 🎨 Design System
 
 - **Thème** : Sombre cinématique avec accents dorés
@@ -64,22 +73,18 @@ src/
 - **Tokens CSS** : Variables HSL personnalisées dans `index.css`
 - **Effets** : Glassmorphism, dégradés dorés, animations flottantes
 
----
-
-## ⚙️ Lancer le projet
-
-```bash
-npm install
-npm run dev
-```
-
----
-
 ## 📝 Fonctionnalités
 
 - ✅ Hero section animée avec particules
 - ✅ Galerie interactive des 3 destinations temporelles
-- ✅ Chatbot FAQ avec matching par mots-clés
+- ✅ Chatbot FAQ
 - ✅ Formulaire de réservation avec validation
 - ✅ Design responsive
 - ✅ Animations Framer Motion
+
+## Licence
+Projet pédagogique - M1/M2 Digital & IA
+
+## Crédits
+- Visuels : Google Gemini
+- Bibliothèques open-source : Vue, Tailwind CSS
